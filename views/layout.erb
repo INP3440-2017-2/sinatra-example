@@ -21,15 +21,39 @@
   <meta property="og:image:height" content="300" />
   <meta property="og:image:alt" content="Un pincel preparando la pintura." />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <%= yield %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="titulo">
+          Bienvenido a mi Blog Genial!
+        </h1>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <% if @message %>
+          <div class="alert alert-info" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <%= @message  %>
+          </div>
+        <% end %>
+
+        <p class="lead profesion sangria">
+          Soy un artista gráfico y en este espacio publico mis trabajos.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOSTRAR SUB VISTAS AQUí -->
+  <%= yield %>
+  <!-- MOSTRAR SUB VISTAS AQUí -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 
